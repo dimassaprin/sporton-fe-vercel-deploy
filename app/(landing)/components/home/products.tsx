@@ -5,40 +5,52 @@ import { FiPlus } from "react-icons/fi";
 
 const productList = [
   {
-    name: "SportsOn Product 1",
+    name: "SportsOn Hyperfast Shoes",
     category: "Running",
-    price: 450000,
-    imgUrl: "product-1.png",
-  },
-  {
-    name: "SportsOn Product 2",
-    category: "Running",
-    price: 250000,
-    imgUrl: "product-1.png",
-  },
-  {
-    name: "SportsOn Product 3",
-    category: "Running",
-    price: 230000,
+    price: 329000,
     imgUrl: "product-3.png",
   },
   {
-    name: "SportsOn Product 4",
+    name: "SportsOn Rockets Tennis",
+    category: "Tennis",
+    price: 999000,
+    imgUrl: "product-2.png",
+  },
+  {
+    name: "SportsOn Slowlivin",
     category: "Running",
-    price: 440000,
+    price: 119000,
+    imgUrl: "product-1.png",
+  },
+  {
+    name: "SportsOn HyperSoccer v2",
+    category: "Running",
+    price: 458000,
     imgUrl: "product-4.png",
   },
   {
-    name: "SportsOn Product 5",
+    name: "SportsOn HyperSoccer v2",
     category: "Running",
-    price: 550000,
+    price: 458000,
+    imgUrl: "product-4.png",
+  },
+  {
+    name: "SportsOn Slowlivin",
+    category: "Running",
+    price: 119000,
     imgUrl: "product-5.png",
   },
   {
-    name: "SportsOn Product 6",
+    name: "SportsOn Hyperfast Shoes",
     category: "Running",
-    price: 650000,
-    imgUrl: "product-6.png",
+    price: 329000,
+    imgUrl: "product-3.png",
+  },
+  {
+    name: "SportsOn Rockets Tennis",
+    category: "Running",
+    price: 999000,
+    imgUrl: "product-2.png",
   },
 ];
 
@@ -51,7 +63,7 @@ const ProductsSection = () => {
       <div className="grid grid-cols-4 gap-5">
         {productList.map((product, index) => (
           <Link
-            href="#"
+            href={`/product/${product.name}`}
             key={index}
             className="p-1.5 bg-white hover:drop-shadow-xl duration-300"
           >

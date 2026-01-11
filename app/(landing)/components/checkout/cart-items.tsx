@@ -15,18 +15,12 @@ const CartItems = () => {
     (total, item) => total + item.price * item.qty,
     0
   );
-  const handleCheckout = () => {
-    push("/checkout");
-  };
   
     const payment = () => {};
 
   return (
     <CardWithHeader title="Cart Items">
-    <div className="bg-white flex flex-col h-full p-0">
-        <div className="px-5 py-4 border-b border-gray-200">
-            <h2 className="font-bold text-lg">Cart Items</h2>
-        </div>
+    <div className="bg-white flex flex-col justify-between h-[calc(100%-70px)]">
         <div className="overflow-auto max-h-[300px] flex-1">
         {cartList.map((item, index) => (
         <div className="border-b border-gray-200 p-4 flex gap-3" key={index}>
@@ -56,7 +50,7 @@ const CartItems = () => {
         </div>
       ))}
         </div>
-      <div className="border-t border-gray-200 p-4">
+      <div className="border-t border-gray-200 p-4 mt-auto">
         <div className="flex justify-between font-semibold">
           <div className="text-sm">Total</div>
           <div className="text-primary text-xs">
@@ -66,7 +60,7 @@ const CartItems = () => {
         <Button
           variant="dark"
           className="w-full mt-4"
-          onClick={handleCheckout}
+          onClick={ () => push("/payment")}
         >
           <FiCreditCard />
            Proceed to Payment

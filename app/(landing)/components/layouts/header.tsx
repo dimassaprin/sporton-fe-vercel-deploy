@@ -30,14 +30,14 @@ const Header = () => {
           <Link href="#">Category</Link>
           <Link href="#">Explore Products</Link>
         </nav>
-        <div className="relative flex gap-10">
+        <div className="relative flex gap-10 z-10">
           <FiSearch size={24} />
           <button
             className="relative cursor-pointer"
             onClick={() => setIsCartPopupOpen(!isCartPopupOpen)}
           >
             <FiShoppingBag size={24} />
-            <div className="bg-primary rounded-full w-3.5 h-3.5 absolute -top-1 -right-1 text-[10px] text-white text-center">
+            <div className="bg-primary rounded-full w-3.5 h-3.5 absolute -top-1 -right-1 text-[10px] text-white text-center z-10">
               3
             </div>
           </button>
