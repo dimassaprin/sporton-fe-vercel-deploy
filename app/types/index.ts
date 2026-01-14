@@ -34,7 +34,7 @@ export interface Transaction {
   status: "pending" | "paid" | "rejected";
   purchasedItems: {
     productId: string;
-    qty: number;
+    qty:number;
   };
   totalPayment: string;
   customerName: string;
